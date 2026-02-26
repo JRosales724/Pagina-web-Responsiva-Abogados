@@ -1,0 +1,228 @@
+/*
+    STYLE MENU
+*/
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f6f2;
+}
+
+/* ESTILO AL COLOCAR UNA ETIQUETA <P></P> */
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+  color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    STYLE NAV
+----------------------------------------------------- */
+
+.navbar {
+  padding: 15px 10px;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+  box-shadow: none;
+  outline: none !important;
+  border: none;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  border-bottom: 1px dashed #ddd;
+  margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    STYLE MENU
+----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* COLOR DEL MENU */
+#sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #670f32;
+  color: #fff;
+  transition: all 0.3s;
+  position: sticky;
+  overflow-y: auto;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+/* COLOR DEL ENCABEZADO DEL MENU */
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #670f32;
+}
+
+/* COLOR DE LA DIVICION DE LOS DIV, ES LA RAYA QUE DIVIDE LA LISTA CON LOS BOTONES DE CERRAR SESION */
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #a57f2c;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+/* COLOR DEL TEXTO DEL BOTON CUANDO SE PASA POR ENCIMA CON EL RATON */
+#sidebar ul li a:hover {
+  color: #a57f2c;
+  background: #fff;
+}
+
+/* COLOR DEL BOTON CUANDO SE DESPLIEGA LA LISTA */
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #611232;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+/* COLOR AL DESPLEGAR LA LISTA ESTE VA DE LA MANO CON A.ARTICLE */
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #611032;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* COLOR DEL BOTON DE CERRAR SESION */
+a.download {
+  background: #fff;
+  color: #611232;
+}
+
+a.article, /* ESTE ES EL COLOR DE CUANDO ABRE EL SUBMENU DE LA LISTA */
+a.article:hover {
+  background: #611032 !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+/*ESTILO PARA EL BOTON DE MENU */
+#sidebarCollapse {
+  background-color: #161a1d; /* Color de fondo */
+  border-color: #161a1d; /* Color del borde */
+  color: white; /* Color del texto */
+}
+
+#sidebarCollapse:hover {
+  background-color: #34383b; /* Color de fondo al pasar el ratón */
+  border-color: #34383b; /* Color del borde al pasar el ratón */
+}
+
+/*Boton de ir arriba*/
+
+#button-up {
+  width: 60px;
+  height: 60px;
+  background: #46a2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  border: 4px solid transparent;
+  transition: all 300ms ease;
+  transform: scale(0);
+}
+
+#button-up:hover {
+  transform: scale(1.1);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* en tu CSS */
+.axm-main--loading {
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
